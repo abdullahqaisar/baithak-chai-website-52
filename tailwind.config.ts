@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				chai: {
+					'brown-dark': '#502D16',
+					'brown': '#8B5A2B',
+					'brown-light': '#A67C52',
+					'orange': '#D4843A',
+					'orange-light': '#F2A54A',
+					'cream': '#F5E7D3',
+					'gold': '#D4AF37'
 				}
+			},
+			fontFamily: {
+				'playfair': ['Playfair Display', 'serif'],
+				'poppins': ['Poppins', 'sans-serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +98,25 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'steam-rise': {
+					'0%': { opacity: '0', transform: 'translateY(0px)' },
+					'50%': { opacity: '0.8' },
+					'100%': { opacity: '0', transform: 'translateY(-15px) translateX(5px)' }
+				},
+				'fade-in-up': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'steam': 'steam-rise 2s ease-out infinite',
+				'fade-in-up': 'fade-in-up 0.7s ease-out'
+			},
+			backgroundImage: {
+				'wood-texture': "url('/public/lovable-uploads/ac2067d8-c76c-4656-8dbd-9c9ed5e9b9dd.png')"
 			}
 		}
 	},
