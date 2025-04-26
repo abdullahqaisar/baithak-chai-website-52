@@ -1,4 +1,3 @@
-
 import { BaithakLocation } from '@/types/locations';
 
 export const locations: BaithakLocation[] = [
@@ -9,7 +8,7 @@ export const locations: BaithakLocation[] = [
     address: "Tea Street, Boat Basin, Clifton",
     phone: "+92-21-12345678",
     hours: "Daily, 9:00 AM - 11:00 PM",
-    image: "/public/lovable-uploads/028b0290-521d-4f8c-890c-374b9a55e2f3.png",
+    image: "/lovable-uploads/1492321936769-b49830bc1d1e",
     mapLink: "#",
   },
   {
@@ -18,7 +17,7 @@ export const locations: BaithakLocation[] = [
     type: "Cart",
     address: "Food Street, Old Anarkali", 
     hours: "Daily, 3:00 PM - 12:00 AM",
-    image: "/public/lovable-uploads/c485bd56-0c13-4032-9c21-da684503d540.png",
+    image: "/lovable-uploads/1487958449943-2429e8be8625",
     mapLink: "#",
   },
   {
@@ -28,7 +27,7 @@ export const locations: BaithakLocation[] = [
     address: "Blue Area, F-7 Markaz",
     phone: "+92-51-87654321",
     hours: "Daily, 8:00 AM - 10:00 PM",
-    image: "/public/lovable-uploads/110d21db-9a75-4d67-a0b9-93c48deaee8a.png",
+    image: "/lovable-uploads/1466442929976-97336a657be",
     mapLink: "#",
   },
   {

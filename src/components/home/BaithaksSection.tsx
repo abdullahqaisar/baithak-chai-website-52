@@ -1,13 +1,18 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin } from 'lucide-react';
+import { locations } from '@/data/locations';
 
 const LocationCard = ({ city, address, image }: { city: string; address: string; image: string }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
       <div className="aspect-w-16 aspect-h-9">
-        <img src={image} alt={city} className="w-full h-48 object-cover" loading="lazy" />
+        <img 
+          src={image} 
+          alt={`${city} Location`} 
+          className="w-full h-48 object-cover" 
+          loading="lazy" 
+        />
       </div>
       <div className="p-6">
         <h3 className="text-xl font-bold text-chai-brown-dark mb-2">{city}</h3>
@@ -27,6 +32,8 @@ const LocationCard = ({ city, address, image }: { city: string; address: string;
 };
 
 const BaithaksSection = () => {
+  const featuredLocations = locations.slice(0, 3);
+  
   return (
     <section className="section-padding bg-chai-cream">
       <div className="container-wide">
@@ -38,21 +45,14 @@ const BaithaksSection = () => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <LocationCard 
-            city="Karachi"
-            address="Tea Street, Boat Basin, Clifton"
-            image="/lovable-uploads/62b35be7-4aa5-4329-be51-880fe3457700.png"
-          />
-          <LocationCard 
-            city="Lahore"
-            address="Food Street, Old Anarkali" 
-            image="/lovable-uploads/57e3d15b-bf50-48bf-980c-d0b0f033300c.png"
-          />
-          <LocationCard 
-            city="Islamabad"
-            address="Blue Area, F-7 Markaz"
-            image="/lovable-uploads/110d21db-9a75-4d67-a0b9-93c48deaee8a.png"
-          />
+          {featuredLocations.map((location) => (
+            <LocationCard 
+              key={location.id}
+              city={location.city}
+              address={location.address}
+              image={location.image}
+            />
+          ))}
         </div>
         
         <div className="text-center mt-12">
