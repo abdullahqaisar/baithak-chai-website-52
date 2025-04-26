@@ -42,9 +42,15 @@ const Footer = () => {
         <div>
           <h4 className="font-semibold mb-4 text-chai-orange-light">Connect With Us</h4>
           <div className="flex space-x-4">
-            <a href="#" className="text-chai-cream hover:text-chai-orange transition-colors"><Facebook /></a>
-            <a href="#" className="text-chai-cream hover:text-chai-orange transition-colors"><Instagram /></a>
-            <a href="#" className="text-chai-cream hover:text-chai-orange transition-colors"><Twitter /></a>
+            <a href="https://www.facebook.com/share/18pPvctQHZ/" target="_blank" rel="noopener noreferrer" className="text-chai-cream hover:text-chai-orange transition-colors">
+              <Facebook />
+            </a>
+            <a href="https://www.instagram.com/baithakchaii?igsh=aDhsaGZtczlramV4" target="_blank" rel="noopener noreferrer" className="text-chai-cream hover:text-chai-orange transition-colors">
+              <Instagram />
+            </a>
+            <a href="#" className="text-chai-cream hover:text-chai-orange transition-colors">
+              <Twitter />
+            </a>
           </div>
         </div>
       </div>

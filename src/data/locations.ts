@@ -1,3 +1,4 @@
+
 import { BaithakLocation } from '@/types/locations';
 
 export const locations: BaithakLocation[] = [
@@ -28,34 +29,6 @@ export const locations: BaithakLocation[] = [
     phone: "+92-51-87654321",
     hours: "Daily, 8:00 AM - 10:00 PM",
     image: "/lovable-uploads/dadc8bf4-2fc3-4618-ab12-1b6e7eab683a.png",
-    mapLink: "#",
-  },
-  {
-    id: 4,
-    city: "Peshawar",
-    type: "Partner Dhaba",
-    address: "Qissa Khwani Bazaar",
-    hours: "Daily, 7:00 AM - 11:00 PM",
-    image: "/public/lovable-uploads/62b35be7-4aa5-4329-be51-880fe3457700.png",
-    mapLink: "#",
-  },
-  {
-    id: 5,
-    city: "Multan",
-    type: "Cart",
-    address: "Near Ghanta Ghar",
-    hours: "Daily, 4:00 PM - 12:00 AM",
-    image: "/public/lovable-uploads/57e3d15b-bf50-48bf-980c-d0b0f033300c.png",
-    mapLink: "#",
-  },
-  {
-    id: 6,
-    city: "Faisalabad",
-    type: "Partner Dhaba",
-    address: "D-Ground Market",
-    phone: "+92-41-98765432",
-    hours: "Daily, 10:00 AM - 11:00 PM",
-    image: "/public/lovable-uploads/96f24c07-b73f-4a98-a4d8-5b16130c9b72.png",
     mapLink: "#",
   },
 ];
