@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Twitter } from 'lucide-react';
@@ -16,6 +15,7 @@ const Footer = () => {
             />
             <span className="text-2xl font-bold">Baithak Chai</span>
           </div>
+          
           <p className="text-gray-300">Jahan Chai, Wahan Baithak - More than just chai, we're brewing moments worth remembering.</p>
         </div>
         
