@@ -1,7 +1,21 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Home, CoffeeIcon, MapPin, Images, Info } from 'lucide-react';
+import { Menu, X, Home, CoffeeIcon, MapPin, Images, Info } from 'lucide-react';
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerTrigger,
+} from "@/components/ui/drawer"
+
+const navLinks = [
+  { to: "/", icon: Home, label: "Home" },
+  { to: "/blends", icon: CoffeeIcon, label: "Our Blends" },
+  { to: "/locations", icon: MapPin, label: "Locations" },
+  { to: "/gallery", icon: Images, label: "Gallery" },
+  { to: "/about", icon: Info, label: "About Us" },
+];
 
 const Navbar = () => {
   return (
@@ -16,27 +30,52 @@ const Navbar = () => {
           <span className="text-xl font-bold text-dark-purple">Baithak Chai</span>
         </Link>
         
-        <div className="flex items-center space-x-6">
-          <Link to="/" className="flex items-center space-x-2 hover:text-primary-purple">
-            <Home size={20} />
-            <span>Home</span>
-          </Link>
-          <Link to="/blends" className="flex items-center space-x-2 hover:text-primary-purple">
-            <CoffeeIcon size={20} />
-            <span>Our Blends</span>
-          </Link>
-          <Link to="/locations" className="flex items-center space-x-2 hover:text-primary-purple">
-            <MapPin size={20} />
-            <span>Locations</span>
-          </Link>
-          <Link to="/gallery" className="flex items-center space-x-2 hover:text-primary-purple">
-            <Images size={20} />
-            <span>Gallery</span>
-          </Link>
-          <Link to="/about" className="flex items-center space-x-2 hover:text-primary-purple">
-            <Info size={20} />
-            <span>About Us</span>
-          </Link>
+        {/* Desktop Navigation */}
+        <div className="hidden md:flex items-center space-x-6">
+          {navLinks.map((link) => (
+            <Link 
+              key={link.to}
+              to={link.to} 
+              className="flex items-center space-x-2 hover:text-primary-purple"
+            >
+              <link.icon size={20} />
+              <span>{link.label}</span>
+            </Link>
+          ))}
+        </div>
+
+        {/* Mobile Navigation */}
+        <div className="md:hidden">
+          <Drawer>
+            <DrawerTrigger asChild>
+              <button className="p-2">
+                <Menu size={24} />
+              </button>
+            </DrawerTrigger>
+            <DrawerContent>
+              <div className="p-4">
+                <div className="flex justify-end mb-4">
+                  <DrawerClose asChild>
+                    <button className="p-2">
+                      <X size={24} />
+                    </button>
+                  </DrawerClose>
+                </div>
+                <div className="flex flex-col space-y-4">
+                  {navLinks.map((link) => (
+                    <Link 
+                      key={link.to}
+                      to={link.to} 
+                      className="flex items-center space-x-3 p-2 hover:bg-gray-100 rounded-lg"
+                    >
+                      <link.icon size={24} />
+                      <span className="text-lg">{link.label}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </DrawerContent>
+          </Drawer>
         </div>
       </div>
     </nav>
@@ -44,3 +83,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
