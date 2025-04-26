@@ -6,13 +6,13 @@ import { MapPin } from 'lucide-react';
 const LocationCard = ({ city, address, image }: { city: string; address: string; image: string }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-      <div className="h-48 overflow-hidden">
-        <img src={image} alt={city} className="w-full h-full object-cover" />
+      <div className="aspect-w-16 aspect-h-9">
+        <img src={image} alt={city} className="w-full h-48 object-cover" loading="lazy" />
       </div>
       <div className="p-6">
         <h3 className="text-xl font-bold text-chai-brown-dark mb-2">{city}</h3>
         <div className="flex items-start mb-4">
-          <MapPin className="h-5 w-5 text-chai-orange mr-2 mt-0.5" />
+          <MapPin className="h-5 w-5 text-chai-orange mr-2 mt-0.5 flex-shrink-0" />
           <p className="text-chai-brown">{address}</p>
         </div>
         <Link to="/locations" className="text-chai-orange font-medium hover:text-chai-orange-light inline-flex items-center">
@@ -41,12 +41,12 @@ const BaithaksSection = () => {
           <LocationCard 
             city="Karachi"
             address="Tea Street, Boat Basin, Clifton"
-            image="/public/lovable-uploads/028b0290-521d-4f8c-890c-374b9a55e2f3.png"
+            image="/public/lovable-uploads/62b35be7-4aa5-4329-be51-880fe3457700.png"
           />
           <LocationCard 
             city="Lahore"
             address="Food Street, Old Anarkali" 
-            image="/public/lovable-uploads/c485bd56-0c13-4032-9c21-da684503d540.png"
+            image="/public/lovable-uploads/57e3d15b-bf50-48bf-980c-d0b0f033300c.png"
           />
           <LocationCard 
             city="Islamabad"

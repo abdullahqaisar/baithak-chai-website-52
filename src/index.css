@@ -91,6 +91,10 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-playfair;
   }
+  
+  img {
+    @apply max-w-full h-auto;
+  }
 }
 
 @layer components {
@@ -111,14 +115,69 @@
   }
 
   .btn-primary {
-    @apply bg-chai-orange text-white px-6 py-3 rounded-md font-medium transition-all hover:bg-chai-orange-light;
+    @apply bg-chai-orange text-white px-6 py-3 rounded-md font-medium transition-all hover:bg-chai-orange-light inline-block w-full sm:w-auto text-center;
   }
 
   .btn-secondary {
-    @apply bg-transparent border border-chai-brown text-chai-brown-dark px-6 py-3 rounded-md font-medium transition-all hover:bg-chai-brown hover:text-white;
+    @apply bg-transparent border border-chai-brown text-chai-brown-dark px-6 py-3 rounded-md font-medium transition-all hover:bg-chai-brown hover:text-white inline-block w-full sm:w-auto text-center;
   }
 
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
+  }
+  
+  /* Aspect ratio fallbacks for browsers that don't support aspect-ratio */
+  .aspect-w-16 {
+    position: relative;
+  }
+  
+  .aspect-w-16::before {
+    content: "";
+    display: block;
+    padding-bottom: calc(9 / 16 * 100%);
+  }
+  
+  .aspect-w-16 > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @supports (aspect-ratio: 16/9) {
+    .aspect-w-16::before {
+      display: none;
+    }
+    
+    .aspect-w-16 {
+      aspect-ratio: 16/9;
+    }
+    
+    .aspect-w-16 > img {
+      position: static;
+    }
+  }
+  
+  /* Animation for steaming cup */
+  @keyframes steam {
+    0% { opacity: 0.8; transform: translateY(0) scale(1); }
+    50% { opacity: 0.4; transform: translateY(-10px) scale(1.1); }
+    100% { opacity: 0; transform: translateY(-20px) scale(1.2); }
+  }
+  
+  .animate-steam {
+    animation: steam 2s infinite ease-out;
+  }
+  
+  /* Fade-in animation */
+  @keyframes fade-in-up {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
   }
 }

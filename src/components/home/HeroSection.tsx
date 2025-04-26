@@ -5,16 +5,6 @@ import { Link } from 'react-router-dom';
 const HeroSection = () => {
   return (
     <div className="relative min-h-screen flex items-center bg-gradient-to-b from-chai-brown-dark to-chai-brown pt-16">
-      <div 
-        className="absolute inset-0 z-0 opacity-40"
-        style={{
-          backgroundImage: `url('/public/lovable-uploads/028b0290-521d-4f8c-890c-374b9a55e2f3.png')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundBlendMode: 'multiply'
-        }}
-      ></div>
-      
       <div className="container-wide relative z-10 text-white">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-6 animate-fade-in-up">

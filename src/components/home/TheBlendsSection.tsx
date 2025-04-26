@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 const BlendCard = ({ name, description, image, alt }: { name: string; description: string; image: string; alt: string }) => {
   return (
     <div className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-      <img src={image} alt={alt} className="w-full h-64 object-cover" />
+      <div className="aspect-w-16 aspect-h-9">
+        <img src={image} alt={alt} className="w-full h-64 object-cover" loading="lazy" />
+      </div>
       <div className="p-6">
         <h3 className="text-2xl font-bold text-chai-brown-dark mb-2">{name}</h3>
         <p className="text-chai-brown mb-4">{description}</p>
@@ -33,19 +35,19 @@ const TheBlendsSection = () => {
           <BlendCard 
             name="Karachi Kadak" 
             description="Bold, brisk, and buzzing with energy. The perfect morning kick-starter or midday pick-me-up." 
-            image="/public/lovable-uploads/62b35be7-4aa5-4329-be51-880fe3457700.png"
+            image="/public/lovable-uploads/7d85d3de-e894-47ee-9e0e-f01d7e6566fc.png"
             alt="Karachi Kadak Chai"
           />
           <BlendCard 
             name="Lahori Masala" 
             description="Spiced to perfection with a desi flair. Rich with cardamom, cinnamon and cloves for a true Pakistani experience." 
-            image="/public/lovable-uploads/57e3d15b-bf50-48bf-980c-d0b0f033300c.png"
+            image="/public/lovable-uploads/9ef2f9d3-0c89-4390-beab-0e030160522f.png"
             alt="Lahori Masala Chai"
           />
           <BlendCard 
             name="Islamabad Light Roast" 
             description="Smooth, calm, and contemplative. A gentler brew perfect for quiet evenings and thoughtful conversations." 
-            image="/public/lovable-uploads/96f24c07-b73f-4a98-a4d8-5b16130c9b72.png"
+            image="/public/lovable-uploads/ac2067d8-c76c-4656-8dbd-9c9ed5e9b9dd.png"
             alt="Islamabad Light Roast Chai"
           />
         </div>
