@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from '../components/layout/Navbar';
 import Footer from '../components/layout/Footer';
@@ -91,17 +90,6 @@ const BlendsPage = () => {
         profile: "Smooth & Delicate",
         ingredients: ["Premium Darjeeling Tea", "Light Touch of Cardamom", "Saffron", "Rose Petals"],
         pairsWith: ["Cookies", "Cake", "Evening Reflections", "Book Reading"]
-      }
-    },
-    {
-      name: "Peshawar Kahwa",
-      description: "A green tea blend with nuts and spices, inspired by the traditional Pashtun hospitality.",
-      image: "/public/lovable-uploads/bf101037-1e7a-49f7-a59b-d5450a158ea4.png",
-      details: {
-        strength: "Medium",
-        profile: "Nutty & Aromatic",
-        ingredients: ["Premium Green Tea", "Almonds", "Cardamom", "Cinnamon", "Saffron"],
-        pairsWith: ["Dried Fruits", "Nuts", "Cultural Discussions", "After Dinner"]
       }
     },
   ];
