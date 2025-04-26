@@ -35,19 +35,19 @@ const TheBlendsSection = () => {
           <BlendCard 
             name="Karachi Kadak" 
             description="Bold, brisk, and buzzing with energy. The perfect morning kick-starter or midday pick-me-up." 
-            image="/lovable-uploads/7d85d3de-e894-47ee-9e0e-f01d7e6566fc.png"
+            image="/lovable-uploads/21abbafe-b493-4f69-a93a-a238911bfe9b.png"
             alt="Karachi Kadak Chai"
           />
           <BlendCard 
             name="Lahori Masala" 
             description="Spiced to perfection with a desi flair. Rich with cardamom, cinnamon and cloves for a true Pakistani experience." 
-            image="/lovable-uploads/9ef2f9d3-0c89-4390-beab-0e030160522f.png"
+            image="/lovable-uploads/153c8739-6daa-4a2d-a738-28e7f7018905.png"
             alt="Lahori Masala Chai"
           />
           <BlendCard 
             name="Islamabad Light Roast" 
             description="Smooth, calm, and contemplative. A gentler brew perfect for quiet evenings and thoughtful conversations." 
-            image="/lovable-uploads/ac2067d8-c76c-4656-8dbd-9c9ed5e9b9dd.png"
+            image="/lovable-uploads/dadc8bf4-2fc3-4618-ab12-1b6e7eab683a.png"
             alt="Islamabad Light Roast Chai"
           />
         </div>

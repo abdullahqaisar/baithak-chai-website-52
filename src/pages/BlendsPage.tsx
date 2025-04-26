@@ -63,7 +63,7 @@ const BlendsPage = () => {
     {
       name: "Karachi Kadak",
       description: "Bold, brisk, and buzzing with energy. The perfect morning kick-starter or midday pick-me-up.",
-      image: "/public/lovable-uploads/62b35be7-4aa5-4329-be51-880fe3457700.png",
+      image: "/lovable-uploads/21abbafe-b493-4f69-a93a-a238911bfe9b.png",
       details: {
         strength: "Strong",
         profile: "Bold & Robust",
@@ -74,7 +74,7 @@ const BlendsPage = () => {
     {
       name: "Lahori Masala",
       description: "Spiced to perfection with a desi flair. Rich with cardamom, cinnamon and cloves for a true Pakistani experience.",
-      image: "/public/lovable-uploads/57e3d15b-bf50-48bf-980c-d0b0f033300c.png",
+      image: "/lovable-uploads/153c8739-6daa-4a2d-a738-28e7f7018905.png",
       details: {
         strength: "Medium-Strong",
         profile: "Rich & Aromatic",
@@ -85,7 +85,7 @@ const BlendsPage = () => {
     {
       name: "Islamabad Light Roast",
       description: "Smooth, calm, and contemplative. A gentler brew perfect for quiet evenings and thoughtful conversations.",
-      image: "/public/lovable-uploads/96f24c07-b73f-4a98-a4d8-5b16130c9b72.png",
+      image: "/lovable-uploads/dadc8bf4-2fc3-4618-ab12-1b6e7eab683a.png",
       details: {
         strength: "Mild-Medium",
         profile: "Smooth & Delicate",
