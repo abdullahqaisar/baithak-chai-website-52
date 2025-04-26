@@ -1,0 +1,62 @@
+
+import { BaithakLocation } from '@/types/locations';
+
+export const locations: BaithakLocation[] = [
+  {
+    id: 1,
+    city: "Karachi",
+    type: "Café",
+    address: "Tea Street, Boat Basin, Clifton",
+    phone: "+92-21-12345678",
+    hours: "Daily, 9:00 AM - 11:00 PM",
+    image: "/public/lovable-uploads/028b0290-521d-4f8c-890c-374b9a55e2f3.png",
+    mapLink: "#",
+  },
+  {
+    id: 2,
+    city: "Lahore",
+    type: "Cart",
+    address: "Food Street, Old Anarkali", 
+    hours: "Daily, 3:00 PM - 12:00 AM",
+    image: "/public/lovable-uploads/c485bd56-0c13-4032-9c21-da684503d540.png",
+    mapLink: "#",
+  },
+  {
+    id: 3,
+    city: "Islamabad",
+    type: "Café",
+    address: "Blue Area, F-7 Markaz",
+    phone: "+92-51-87654321",
+    hours: "Daily, 8:00 AM - 10:00 PM",
+    image: "/public/lovable-uploads/110d21db-9a75-4d67-a0b9-93c48deaee8a.png",
+    mapLink: "#",
+  },
+  {
+    id: 4,
+    city: "Peshawar",
+    type: "Partner Dhaba",
+    address: "Qissa Khwani Bazaar",
+    hours: "Daily, 7:00 AM - 11:00 PM",
+    image: "/public/lovable-uploads/62b35be7-4aa5-4329-be51-880fe3457700.png",
+    mapLink: "#",
+  },
+  {
+    id: 5,
+    city: "Multan",
+    type: "Cart",
+    address: "Near Ghanta Ghar",
+    hours: "Daily, 4:00 PM - 12:00 AM",
+    image: "/public/lovable-uploads/57e3d15b-bf50-48bf-980c-d0b0f033300c.png",
+    mapLink: "#",
+  },
+  {
+    id: 6,
+    city: "Faisalabad",
+    type: "Partner Dhaba",
+    address: "D-Ground Market",
+    phone: "+92-41-98765432",
+    hours: "Daily, 10:00 AM - 11:00 PM",
+    image: "/public/lovable-uploads/96f24c07-b73f-4a98-a4d8-5b16130c9b72.png",
+    mapLink: "#",
+  },
+];
