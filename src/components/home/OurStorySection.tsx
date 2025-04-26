@@ -30,7 +30,7 @@ const OurStorySection = () => {
           
           <div className="order-1 lg:order-2">
             <img 
-              src="/public/lovable-uploads/9ef2f9d3-0c89-4390-beab-0e030160522f.png"
+              src="/lovable-uploads/9ef2f9d3-0c89-4390-beab-0e030160522f.png"
               alt="Our Story" 
               className="rounded-lg shadow-xl max-w-full h-auto"
             />

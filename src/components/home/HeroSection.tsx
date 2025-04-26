@@ -28,7 +28,7 @@ const HeroSection = () => {
           <div className="hidden lg:flex justify-center">
             <div className="relative">
               <img 
-                src="/public/lovable-uploads/bf101037-1e7a-49f7-a59b-d5450a158ea4.png"
+                src="/lovable-uploads/bf101037-1e7a-49f7-a59b-d5450a158ea4.png"
                 alt="Baithak Chai Cup" 
                 className="max-w-md rounded-lg shadow-2xl"
               />
