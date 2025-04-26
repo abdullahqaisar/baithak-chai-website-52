@@ -2,12 +2,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Home, CoffeeIcon, MapPin, Images, Info } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 import {
-  Drawer,
-  DrawerClose,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/components/ui/drawer"
+  Sheet,
+  SheetContent,
+  SheetClose,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 const navLinks = [
   { to: "/", icon: Home, label: "Home" },
@@ -18,6 +19,8 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+  const isMobile = useIsMobile();
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-md z-50 shadow-sm">
       <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -45,42 +48,33 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Navigation */}
-        <div className="md:hidden">
-          <Drawer>
-            <DrawerTrigger asChild>
-              <button className="p-2">
+        {isMobile && (
+          <Sheet>
+            <SheetTrigger asChild>
+              <button className="md:hidden p-2 flex items-center justify-center">
                 <Menu size={24} />
               </button>
-            </DrawerTrigger>
-            <DrawerContent>
-              <div className="p-4">
-                <div className="flex justify-end mb-4">
-                  <DrawerClose asChild>
-                    <button className="p-2">
-                      <X size={24} />
-                    </button>
-                  </DrawerClose>
-                </div>
-                <div className="flex flex-col space-y-4">
-                  {navLinks.map((link) => (
-                    <Link 
-                      key={link.to}
-                      to={link.to} 
+            </SheetTrigger>
+            <SheetContent side="right" className="w-[75vw] sm:w-[350px]">
+              <div className="flex flex-col gap-6 mt-8">
+                {navLinks.map((link) => (
+                  <SheetClose asChild key={link.to}>
+                    <Link
+                      to={link.to}
                       className="flex items-center space-x-3 p-2 hover:bg-gray-100 rounded-lg"
                     >
                       <link.icon size={24} />
                       <span className="text-lg">{link.label}</span>
                     </Link>
-                  ))}
-                </div>
+                  </SheetClose>
+                ))}
               </div>
-            </DrawerContent>
-          </Drawer>
-        </div>
+            </SheetContent>
+          </Sheet>
+        )}
       </div>
     </nav>
   );
 };
 
 export default Navbar;
-
